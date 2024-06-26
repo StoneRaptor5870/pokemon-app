@@ -12,6 +12,16 @@ export default async function LandingPage() {
     redirect("/signin");
   }
 
+  const userId = session.user.id;
+  const user = await prisma.user.findUnique({
+    where: { id: userId },
+    include: { firstPokemon: true },
+  });
+
+  if (user && user.firstPokemon) {
+    redirect("/dashboard")
+  }
+
   const pokemonIds = [1, 4, 7];
 
   // Generate image URLs based on the IDs

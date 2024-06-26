@@ -17,7 +17,7 @@ export default function SignIn() {
     if (result && result.error) {
       alert(result.error);
     } else if (result) {
-      window.location.href = "/dashboard";
+      window.location.href = "/landing";
     } else {
       alert("An unexpected error occurred. Please try again.");
     }
@@ -26,22 +26,32 @@ export default function SignIn() {
   return (
     <div className="h-screen md:flex">
       <div className="relative overflow-hidden md:flex w-full md:w-1/2 bg-gradient-to-tr from-yellow-400 to-red-600 justify-around items-center hidden">
-        <div>
+        <div className="flex flex-col justify-center items-center h-full w-full">
           {/* <h1 className="text-white font-bold text-4xl font-sans">GoFinance</h1>
           <p className="text-white mt-1">Wallet App</p> */}
           <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/250px-International_Pok%C3%A9mon_logo.svg.png"
-          alt="Professor Oak"
-          className="w-[500px] h-full object-contain -mr-6"
-        />
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/250px-International_Pok%C3%A9mon_logo.svg.png"
+            alt="Professor Oak"
+            className="w-[400px] h-full object-contain -mr-6 mt-2"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Ash_Ketchum_Journeys.png/220px-Ash_Ketchum_Journeys.png"
+            alt="Ash Ketchum"
+            className="w-[400px] h-full object-contain -mr-6 mb-16"
+          />
         </div>
         {/* <div className="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
         <div className="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
         <div className="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
         <div className="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div> */}
       </div>
-      <div className="flex flex-grow md:w-1/2 h-full justify-center py-10 items-center bg-white">
-        <form className="bg-white" onSubmit={handleSubmit}>
+      <div className="flex flex-grow flex-col md:w-1/2 h-full justify-center py-10 items-center bg-white">
+        <img
+          src="https://cdn.dribbble.com/users/6245075/screenshots/16269935/pokeball.png"
+          alt="Pokeball"
+          className="flex justify-center items-center w-1/4 h-11/4 object-contain"
+        />
+        <form className="flex flex-col justify-center items-center bg-white" onSubmit={handleSubmit}>
           <h1 className="text-gray-800 font-bold text-2xl mb-1">
             Hello Again Traveler!
           </h1>
@@ -68,7 +78,7 @@ export default function SignIn() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
               required
-              style={{ color: 'black' }}
+              style={{ color: "black" }}
             />
           </div>
 
@@ -92,7 +102,7 @@ export default function SignIn() {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
               required
-              style={{ color: 'black' }}
+              style={{ color: "black" }}
             />
           </div>
           <button

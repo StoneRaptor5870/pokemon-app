@@ -1,8 +1,9 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "../lib/auth";
 import prisma from "../../prisma/db";
-import { redirect } from "next/navigation";
+import { redirect } from "next/navigation"; 
 import Landing from "@/components/Landing";
+import PokemonImage from "@/components/PokemonImage";
 
 export default async function LandingPage() {
   const session = await getServerSession(authOptions);
@@ -31,10 +32,7 @@ export default async function LandingPage() {
       </div> */}
       <div className="flex flex-grow flex-row justify-center items-center gap-12 text-black">
       {pokemonData.map((pokemon) => (
-          <div key={pokemon.id} className="flex flex-col items-center mt-20">
-            <img src={pokemon.imageUrl} alt={pokemon.name} className="w-full h-full"/>
-            {/* <div>{pokemon.name}</div> */}
-          </div>
+          <PokemonImage key={pokemon.id} id={pokemon.id} name={pokemon.name} imageUrl={pokemon.imageUrl} />
         ))}
       </div>
     </div>

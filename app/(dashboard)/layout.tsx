@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-white">
       <div className={`fixed inset-0 z-30 flex-none w-60 p-4 bg-white border-r border-slate-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 transition-transform duration-200 ease-in-out`}>
         <div className="flex flex-col gap-2">
           <SidebarItem href={"/dashboard"} icon={<HomeIcon />} title="Home" />

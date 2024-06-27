@@ -1,4 +1,3 @@
-// components/PokemonImage.tsx
 "use client";
 
 import { useCallback } from "react";

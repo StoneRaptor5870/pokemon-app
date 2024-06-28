@@ -19,7 +19,7 @@ const PokemonImage: React.FC<PokemonImageProps> = ({ id, name, imageUrl }) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ id, name }),
+        body: JSON.stringify({ id, name, imageUrl }),
       });
 
       if (response.ok) {

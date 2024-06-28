@@ -5,7 +5,7 @@ import { Card } from "./ui/card";
 const Dashboard: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
-      <Card title="Home">
+      {/* <Card title="Home">
         <div className="flex flex-col justify-center items-center">
           <div className="w-full p-4">
             <p className="text-xl">User Profile</p>
@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
             </div>
           </div>
         </div>
-      </Card>
+      </Card> */}
     </div>
   )
 };

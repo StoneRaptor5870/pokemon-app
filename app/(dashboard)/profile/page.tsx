@@ -46,6 +46,11 @@ export default async function Profile() {
             <p>
               <strong>Id:</strong> {firstPokemon.pokemonId}
             </p>
+            <img
+              src={firstPokemon.pokemonImage ?? ''}
+              alt={firstPokemon.pokemonName}
+              className="w-32 h-32"
+            />
           </div>
         ) : (
           <p>No Pokémon found</p>

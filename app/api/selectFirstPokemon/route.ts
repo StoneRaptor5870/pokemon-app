@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   }
 
   const userId = session.user?.id;
-  const { id, name } = await req.json();
+  const { id, name, imageUrl } = await req.json();
 
   if (!userId || !id || !name) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -23,6 +23,7 @@ export async function POST(req: NextRequest) {
         userId,
         pokemonId: id,
         pokemonName: name,
+        pokemonImage: imageUrl
       },
     });
     const response = NextResponse.json({ success: true, firstPokemon }, { status: 200 });

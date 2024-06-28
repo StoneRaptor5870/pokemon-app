@@ -30,6 +30,7 @@ model FirstPokemon {
   id               String         @id @default(uuid())
   pokemonId        Int
   pokemonName      String
+  pokemonImage     String?
   userId           String         @unique
   user             User           @relation(fields: [userId], references: [id])
 }

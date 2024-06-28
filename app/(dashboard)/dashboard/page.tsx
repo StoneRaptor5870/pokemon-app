@@ -12,7 +12,7 @@ export default async function DashboardPage() {
   }
   
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full p-4 gap-4 bg-white">
+    <div className="flex flex-col items-center justify-center w-full h-full p-4 gap-4 bg-[url('./../public/Nature.jpg')] bg-cover bg-center bg-no-repeat">
       <div className="mb-4 text-2xl font-bold">Welcome Back, {name}</div>
       <div className="mb-auto">
       <Dashboard/>

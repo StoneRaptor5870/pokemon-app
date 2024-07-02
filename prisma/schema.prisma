@@ -23,6 +23,8 @@ model Pokemons {
   pokemonId        Int     
   name             String
   experience       Int      
+  image            String?
+  type             String?
   user             User                  @relation(fields: [userId], references: [id])             
 }
 

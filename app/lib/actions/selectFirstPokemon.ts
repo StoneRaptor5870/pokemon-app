@@ -1,8 +1,6 @@
 "use server"
-import { getServerSession } from "next-auth";
-import { authOptions } from "../auth";
+
 import api from "@/app/api/pokemon";
-import prisma from "@/prisma/db";
 
 export const pokemonSearch = async (pokemonName: string) => {
   try {

@@ -2,7 +2,6 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../lib/auth";
 import prisma from "../../prisma/db";
 import { redirect } from "next/navigation"; 
-import Landing from "@/components/Landing";
 import PokemonImage from "@/components/PokemonImage";
 
 export default async function LandingPage() {

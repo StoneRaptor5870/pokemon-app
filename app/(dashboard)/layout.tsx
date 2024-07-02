@@ -11,11 +11,8 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
       <div className={`fixed inset-0 z-30 flex-none w-60 p-4 bg-white border-r border-slate-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 transition-transform duration-200 ease-in-out`}>
         <div className="flex flex-col gap-2">
           <SidebarItem href={"/dashboard"} icon={<HomeIcon />} title="Home" />
-          <SidebarItem href={"/profile"} icon={<P2PTransferIcon />} title="User Profile" />
-          <SidebarItem href={"/searchPokemons"} icon={<TransferIcon />} title="Search Pokemons" />
-          {/* <SidebarItem href={"/transactions"} icon={<TransactionsIcon />} title="Transactions" /> */}
-          {/* <SidebarItem href={"/p2pTransfer"} icon={<P2PTransferIcon />} title="P2P Transfer" />
-          <SidebarItem href={"/u2mTransfer"} icon={<P2PTransferIcon />} title="U2M Transfer"/> */}
+          <SidebarItem href={"/profile"} icon={<ProfileIcon />} title="User Profile" />
+          <SidebarItem href={"/searchPokemons"} icon={<SearchPokemonIcon />} title="Search Pokemons" />
         </div>
       </div>
       <div className="flex flex-col flex-1 w-full">
@@ -51,7 +48,7 @@ function HomeIcon() {
     </svg>
   );
 }
-function TransferIcon() {
+function ProfileIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -69,25 +66,7 @@ function TransferIcon() {
     </svg>
   );
 }
-// function TransactionsIcon() {
-//   return (
-//     <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       fill="none"
-//       viewBox="0 0 24 24"
-//       strokeWidth="1.5"
-//       stroke="currentColor"
-//       className="w-6 h-6"
-//     >
-//       <path
-//         strokeLinecap="round"
-//         strokeLinejoin="round"
-//         d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-//       />
-//     </svg>
-//   );
-// }
-function P2PTransferIcon() {
+function SearchPokemonIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

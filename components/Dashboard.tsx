@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface PokemonData {
   id: string;
   pokemonId: number;
@@ -13,7 +15,7 @@ const Dashboard: React.FC<{ pokemonData: PokemonData }> = ({ pokemonData }) => {
     <div className="flex flex-col justify-center items-center w-full h-full">
       <div className="flex flex-col justify-center items-center m-auto mt-64">
         {pokemonData.pokemonImage ? (
-          <img
+          <Image
             src={pokemonData.pokemonImage}
             alt={pokemonData.pokemonName}
             className="w-64 h-64 m-auto"

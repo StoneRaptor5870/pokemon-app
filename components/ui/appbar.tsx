@@ -1,5 +1,5 @@
 import { Button } from "./button";
-import Image from "next/image";
+
 
 interface AppbarProps {
   user?: {
@@ -14,7 +14,7 @@ export const Appbar = ({ user, onSignin, onSignout }: AppbarProps) => {
   return (
     <div className="flex justify-between border-b px-4 text-[#FFCC00] bg-white">
       <div className="text-2xl font-bold flex flex-row justify-center items-center text-red-600 -m-3">
-        <Image
+        <img
           src="https://cdn.dribbble.com/users/6245075/screenshots/16269935/pokeball.png"
           alt="Pokeball"
           className="w-24 h-24 object-contain -mr-6"

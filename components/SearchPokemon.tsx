@@ -7,7 +7,7 @@ import useDebounce from "@/hooks/useDebounce";
 import api from "@/app/api/pokemon";
 import { Card } from "./ui/card";
 import { handleSaveFavourite } from "@/app/lib/actions/addToFavourite";
-import Image from "next/image";
+
 
 export default function SearchPokemon() {
   const [pokemon, setPokemon] = useState("");
@@ -67,7 +67,7 @@ export default function SearchPokemon() {
         {pokemonData ? (
           <Card title={pokemonData.name}>
             <div className="flex flex-col items-center">
-              <Image
+              <img
                 src={pokemonData.sprites.front_default}
                 alt={pokemonData.name}
                 className="w-32 h-32"
@@ -98,7 +98,7 @@ export default function SearchPokemon() {
           {pokemonList.map((pokemon, index) => (
             <Card key={index} title={pokemon.name}>
               <div className="flex flex-col items-center">
-                <Image
+                <img
                   src={pokemon.sprites.front_default}
                   alt={pokemon.name}
                   className="w-32 h-32"

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
-import Image from "next/image";
+
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -28,7 +28,7 @@ export default function SignIn() {
     <div className="h-screen md:flex">
       <div className="relative overflow-hidden md:flex w-full md:w-1/2 bg-gradient-to-tr from-yellow-400 to-red-600 justify-around items-center hidden">
         <div className="flex flex-col justify-center items-center h-full w-full">
-          <Image
+          <img
             src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Ash_Ketchum_Journeys.png/220px-Ash_Ketchum_Journeys.png"
             alt="Ash Ketchum"
             className="w-[400px] h-full object-contain -mr-6 mb-16"
@@ -36,7 +36,7 @@ export default function SignIn() {
         </div>
       </div>
       <div className="flex flex-grow flex-col md:w-1/2 h-full justify-center py-10 items-center bg-white">
-        <Image
+        <img
           src="https://cdn.dribbble.com/users/6245075/screenshots/16269935/pokeball.png"
           alt="Pokeball"
           className="flex justify-center items-center w-1/4 h-11/4 object-contain"

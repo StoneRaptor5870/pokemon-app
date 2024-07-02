@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+
 
 interface PokemonImageProps {
   id: number;
@@ -35,7 +35,7 @@ const PokemonImage: React.FC<PokemonImageProps> = ({ id, name, imageUrl }) => {
 
   return (
     <div onClick={handleClick} className="flex flex-col items-center mt-20 cursor-pointer">
-      <Image src={imageUrl} alt={name} className="w-full h-full" />
+      <img src={imageUrl} alt={name} className="w-full h-full" />
     </div>
   );
 };

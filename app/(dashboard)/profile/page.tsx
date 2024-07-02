@@ -3,7 +3,7 @@ import { authOptions } from "../../lib/auth";
 import { redirect } from "next/navigation";
 import prisma from "@/prisma/db";
 import { Card } from "@/components/ui/card";
-import Image from "next/image";
+
 
 const userData = async () => {
   const session = await getServerSession(authOptions);
@@ -40,7 +40,7 @@ export default async function Profile() {
             Id: {firstPokemon?.pokemonId}
           </p>
           {firstPokemon?.pokemonImage ? (
-            <Image
+            <img
               src={firstPokemon?.pokemonImage}
               alt={firstPokemon?.pokemonName}
               className="w-32 h-32"
@@ -57,7 +57,7 @@ export default async function Profile() {
             <Card key={pokemon.id} title={pokemon.name}>
               <div className="flex flex-col items-center">
                 {pokemon.image ? (
-                  <Image src={pokemon.image} alt={pokemon.name} className="w-32 h-32" />
+                  <img src={pokemon.image} alt={pokemon.name} className="w-32 h-32" />
                 ) : (
                   <p>No image available</p>
                 )}
